@@ -1,4 +1,4 @@
-﻿var name = "Zosia";
+﻿var name = "Ewa";
 var sex = "woman";
 var age = 33;
 
