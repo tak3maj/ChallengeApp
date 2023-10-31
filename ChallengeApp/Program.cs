@@ -2,9 +2,9 @@
 //using System.Runtime.CompilerServices;
 //using System.Threading.Tasks.Sources;
 
-Emp emp1 = new Emp("Adam", "Grzyb");
-Emp emp2 = new Emp("Monika", "Woda");
-Emp emp3 = new Emp("Zuzia", "Trawa");
+Employee.Emp emp1 = new Employee.Emp("Adam", "Grzyb");
+Employee.Emp emp2 = new Employee.Emp("Monika", "Woda");
+Employee.Emp emp3 = new Employee.Emp("Zuzia", "Trawa");
 
 emp1.AddScore(15);
 emp1.AddScore(2);
@@ -22,13 +22,13 @@ var result = emp1.Result;
 var result1 = emp2.Result;
 var result2 = emp3.Result;
 
-List<Emp> emps = new List<Emp>()
+List<Employee.Emp> emps = new List<Employee.Emp>()
 {
     emp1, emp2, emp3
 };
 
 int maxResult = -1;
-Emp empWithMaxResult = null;
+Employee.Emp empWithMaxResult = null;
 
 foreach (var emp in emps)
 {
