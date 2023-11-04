@@ -43,14 +43,14 @@ namespace Empl.Tests
             //arrange
             var employee = new Employee("Adam", "Grzyb");
             employee.AddGrade(20);
-            employee.AddGrade(2);
+            employee.AddGrade(3);
             employee.AddGrade(8);
 
             //act
             var stat = employee.GetStatistics();
 
             //assert
-            Assert.AreEqual(10, stat.Average);
+            Assert.AreEqual(Math.Round(10.33,2),Math.Round(stat.Average,2));
         }
 
     }
