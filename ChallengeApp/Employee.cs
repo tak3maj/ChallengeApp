@@ -15,63 +15,40 @@
 
         public void AddGrade(float grade)
         {
-            int valueInt = (int)grade;
-
             if (grade >= 0 && grade <= 100)
             {
                 this.grades.Add(grade);
             }
-            else 
+            else
             {
                 Console.WriteLine("Invalid grade value");
             }
         }
-        public void AddGrade(string grade)
-        {
-            if (float.TryParse(grade, out float result))
-            {
-                this.AddGrade(result);
-            }
-            else 
-            { 
-                Console.WriteLine("String is not float");
-            }
-        }
         public void AddGrade(short grade)
         {
-            int valueInt = (int)grade;
-            if (grade >= 0 && grade <= 100)
-            {
-                this.grades.Add(grade);
-            }
-            else
-            { 
-                Console.WriteLine("Short is not float");
-            }
+            var value = (float)grade;
+            this.grades.Add(value);
+
         }
         public void AddGrade(long grade)
         {
-            int valueInt = (int)grade;
-            if (grade >= 0 && grade <= 100)
-            {
-                this.grades.Add(grade);
-            }
-            else
-            {
-                Console.WriteLine("Long is not float");
-            }
+            var value = (float)grade;
+            this.grades.Add(value);
         }
         public void AddGrade(double grade)
         {
-            int dbl = (int)grade;
-          
-            if (dbl >= 0 && dbl <= 100)
+            var value = (float)grade;
+            this.grades.Add(value);
+        }
+        public void AddGrade(string grade)
+        {
+            if (float.TryParse(grade, out float value))
             {
-                this.grades.Add(dbl);
+                this.AddGrade(value);
             }
             else
             {
-                Console.WriteLine("Invalid value of number");
+                Console.WriteLine("String is not float");
             }
         }
         public Statistics GetStatistics()
