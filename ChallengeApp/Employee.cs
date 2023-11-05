@@ -27,18 +27,18 @@
         public void AddGrade(short grade)
         {
             var value = (float)grade;
-            this.grades.Add(value);
+            this.AddGrade(value);
 
         }
         public void AddGrade(long grade)
         {
             var value = (float)grade;
-            this.grades.Add(value);
+            this.AddGrade(value);
         }
         public void AddGrade(double grade)
         {
-            var value = (float)grade;
-            this.grades.Add(value);
+            var value = (int)grade;
+            this.AddGrade(value);
         }
         public void AddGrade(string grade)
         {
