@@ -9,7 +9,7 @@ namespace Empl.Tests
         public void TestValueOfMaximum()
         {
             //arrange
-            var employee = new Employee("Ben", "Tod");
+            var employee = new Employee();
             employee.AddGrade(20);
             employee.AddGrade(3);
             employee.AddGrade(8);
@@ -26,7 +26,7 @@ namespace Empl.Tests
         public void TestValueOfMinimum()
         {
             //arrange
-            var employee = new Employee("Ben", "Tod");
+            var employee = new Employee();
             employee.AddGrade(20);
             employee.AddGrade(3);
             employee.AddGrade(8);
@@ -43,7 +43,7 @@ namespace Empl.Tests
         public void TestValueOfAverage()
         {
             //arrange
-            var employee = new Employee("Ben", "Tod");
+            var employee = new Employee();
             employee.AddGrade(20);
             employee.AddGrade(3);
             employee.AddGrade(8);
@@ -59,7 +59,7 @@ namespace Empl.Tests
         public void TestValueOfEmployeeEvaluation()
         {
             //arrange
-            var employee = new Employee("Ben", "Tod");
+            var employee = new Employee();
             employee.AddGrade(20);
             employee.AddGrade(3);
             employee.AddGrade(8);

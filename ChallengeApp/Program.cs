@@ -1,4 +1,5 @@
 ﻿using ChallengeApp;
+using System;
 
 Console.WriteLine("Welcome to the XYZ Employee Assessment Program");
 Console.WriteLine("____________________________________________");
@@ -14,7 +15,16 @@ while (true)
     {
         break;
     }
-    employee.AddGrade(input);
+
+    try
+    {
+        employee.AddGrade(input);
+    }
+
+    catch (Exception e)
+    {
+        Console.WriteLine($"Exception catched: {e.Message}");
+    }
     Console.WriteLine("If you want to end the operation and calculate the statistics, press q. If not this");
 } 
 
