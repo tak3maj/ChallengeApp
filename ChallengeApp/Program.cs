@@ -5,7 +5,7 @@ Console.WriteLine("Welcome to the XYZ Employee Assessment Program");
 Console.WriteLine("____________________________________________");
 Console.WriteLine();
 
-var employee = new Employee("Ben", "Tod");
+var employee = new Employee("Ben", "Tod", "M");
 
 while (true)
 {
