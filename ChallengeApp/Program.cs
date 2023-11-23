@@ -5,28 +5,28 @@ Console.WriteLine("Welcome to the XYZ Employee Assessment Program");
 Console.WriteLine("____________________________________________");
 Console.WriteLine();
 
-var employee = new Employee("Ben", "Tod");
+var employee = new EmployeeInFile("Ben", "Tod");
 
-while (true)
-{
-    Console.WriteLine("Enter another employee rating from 0 to 100");
-    var input = Console.ReadLine();
-    if (input == "q" || input == "Q")
-    {
-        break;
-    }
+//while (true)
+//{
+//    Console.WriteLine("Enter another employee rating from 0 to 100");
+//    var input = Console.ReadLine();
+//    if (input == "q" || input == "Q")
+//    {
+//        break;
+//    }
 
-    try
-    {
-        employee.AddGrade(input);
-    }
+//    try
+//    {
+//        employee.AddGrade(input);
+//    }
 
-    catch (Exception e)
-    {
-        Console.WriteLine($"Exception catched: {e.Message}");
-    }
-    Console.WriteLine("If you want to end the operation and calculate the statistics, press q. If not this");
-} 
+//    catch (Exception e)
+//    {
+//        Console.WriteLine($"Exception catched: {e.Message}");
+//    }
+//    Console.WriteLine("If you want to end the operation and calculate the statistics, press q. If not this");
+//} 
 
 var statistics = employee.GetStatistics(); 
 Console.WriteLine($"Average is {statistics.Average:N2}");

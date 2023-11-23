@@ -1,22 +1,13 @@
-﻿using System;
-using System.Linq;
-
-namespace ChallengeApp
+﻿namespace ChallengeApp
 {
-    public class Employee : IEmployee
+    public class EmployeeInMemory : EmployeeBase
     {
         private List<float> grades = new List<float>();
-     
-            public Employee(string name, string surname)
+        public EmployeeInMemory(string name, string surname) : base(name, surname)
         {
-            this.Name = name;
-            this.Surname = surname;
         }
 
-        public string Name { get; private set; }
-        public string Surname { get; private set; }  
-
-        public void AddGrade(float grade)
+        public override void AddGrade(float grade)
         {
             if (grade >= 0 && grade <= 100)
             {
@@ -24,15 +15,17 @@ namespace ChallengeApp
             }
             else
             {
-               throw new Exception("Invalid grade value");
+                throw new Exception("Invalid grade value");
             }
         }
-        public void AddGrade(short grade)
+
+        public override void AddGrade(short grade)
         {
             var value = (float)grade;
             this.AddGrade(value);
         }
-        public void AddGrade(char grade)
+
+        public override void AddGrade(char grade)
         {
             switch (grade)
             {
@@ -45,11 +38,11 @@ namespace ChallengeApp
                     this.AddGrade(80);
                     break;
                 case 'C':
-                case 'c':   
+                case 'c':
                     this.AddGrade(60);
                     break;
                 case 'D':
-                case 'd':   
+                case 'd':
                     this.AddGrade(40);
                     break;
                 case 'E':
@@ -60,17 +53,20 @@ namespace ChallengeApp
                     throw new Exception("Wrong Letter");
             }
         }
-        public void AddGrade(long grade)
+
+        public override void AddGrade(long grade)
         {
             var value = (float)grade;
             this.AddGrade(value);
         }
-        public void AddGrade(double grade)
+
+        public override void AddGrade(double grade)
         {
             var value = (int)grade;
             this.AddGrade(value);
         }
-        public void AddGrade(string grade)
+
+        public override void AddGrade(string grade)
         {
             if (float.TryParse(grade, out float value))
             {
@@ -81,18 +77,22 @@ namespace ChallengeApp
                 throw new Exception("String is not float");
             }
         }
-        public Statistics GetStatistics()
+
+        public override Statistics GetStatistics()
         {
             var statistics = new Statistics();
             statistics.Average = 0;
             statistics.Max = float.MinValue;
             statistics.Min = float.MaxValue;
 
-           foreach (var index in this.grades)
+            foreach (var grade in this.grades)
             {
-                statistics.Max = Math.Max(statistics.Max, index);
-                statistics.Min = Math.Min(statistics.Min, index);
-                statistics.Average += index;
+                if (grade >= 0)
+                {
+                    statistics.Max = Math.Max(statistics.Max, grade);
+                    statistics.Min = Math.Min(statistics.Min, grade);
+                    statistics.Average += grade;
+                }
             }
             statistics.Average /= this.grades.Count;
 
@@ -114,8 +114,7 @@ namespace ChallengeApp
                     statistics.AverageLetter = 'E';
                     break;
             }
-
             return statistics;
-         }
+        }
     }
 }

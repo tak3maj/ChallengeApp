@@ -12,7 +12,7 @@ namespace ChallengeApp
 
         public void AddGrade(float grade)
         {
-                throw new Exception("Invalid grade value");
+            throw new Exception("Invalid grade value");
         }
 
         public void AddGrade(short grade)
@@ -109,7 +109,6 @@ namespace ChallengeApp
                     }
             }
         }
-
         public Statistics GetStatistics()
         {
             var statistics = new Statistics();
@@ -124,55 +123,6 @@ namespace ChallengeApp
                 statistics.Average += index;
             }
             statistics.Average /= this.grades.Count;
-
-            //switch (statistics.Average)
-            //{
-            //    case var average when average >= 100:
-            //        statistics.AverageLetter = '6';
-            //        break;
-            //    case var average when average >= 95:
-            //        statistics.AverageLetter = '6-';
-            //        break;
-            //    case var average when average >= 85:
-            //        statistics.AverageLetter = '5+';
-            //        break;
-            //    case var average when average >= 80:
-            //        statistics.AverageLetter = '5';
-            //        break;
-            //    case var average when average >= 75:
-            //        statistics.AverageLetter = '5-';
-            //        break;
-            //    case var average when average >= 65:
-            //        statistics.AverageLetter = '4+';
-            //        break;
-            //    case var average when average >= 60:
-            //        statistics.AverageLetter = '4';
-            //        break;
-            //    case var average when average >= 55:
-            //        statistics.AverageLetter = '3+';
-            //        break;
-            //    case var average when average >= 40:
-            //        statistics.AverageLetter = '3';
-            //        break;
-            //    case var average when average >= 35:
-            //        statistics.AverageLetter = '3-';
-            //        break;
-            //    case var average when average >= 25:
-            //        statistics.AverageLetter = '2+';
-            //        break;
-            //    case var average when average >= 20:
-            //        statistics.AverageLetter = '2';
-            //        break;
-            //    case var average when average >= 15:
-            //        statistics.AverageLetter = '2-';
-            //        break;
-            //    case var average when average >= 10:
-            //        statistics.AverageLetter = '1+';
-            //        break;
-            //    default:
-            //        statistics.AverageLetter = '1';
-            //        break;
-            //}
 
             return statistics;
         }
