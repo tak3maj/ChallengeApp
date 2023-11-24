@@ -17,15 +17,6 @@ namespace ChallengeApp
                 writer.WriteLine(grade);
             }
         }
-
-        public override void AddGrade(short grade)
-        {
-            using (var writer = File.AppendText(fileName))
-            {
-                writer.WriteLine(grade);
-            }
-        }
-
         public override void AddGrade(char grade)
         {
             using (var writer = File.AppendText(fileName))

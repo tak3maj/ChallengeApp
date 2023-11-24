@@ -12,27 +12,26 @@ namespace ChallengeApp
 
         public void AddGrade(float grade)
         {
-            throw new Exception("Invalid grade value");
-        }
-
-        public void AddGrade(short grade)
-        {
-            throw new NotImplementedException();
+            string gradeValue = grade.ToString();
+            AddGrade(gradeValue);
         }
 
         public void AddGrade(char grade)
         {
-            throw new NotImplementedException();
+            string gradeValue = grade.ToString();
+            AddGrade(gradeValue);
         }
 
         public void AddGrade(long grade)
         {
-            throw new NotImplementedException();
+            string gradeValue = grade.ToString();
+            AddGrade(gradeValue);
         }
 
         public void AddGrade(double grade)
         {
-            throw new NotImplementedException();
+            string gradeValue = grade.ToString();
+            AddGrade(gradeValue);
         }
 
         public void AddGrade(string grade)

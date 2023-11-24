@@ -18,13 +18,6 @@
                 throw new Exception("Invalid grade value");
             }
         }
-
-        public override void AddGrade(short grade)
-        {
-            var value = (float)grade;
-            this.AddGrade(value);
-        }
-
         public override void AddGrade(char grade)
         {
             switch (grade)

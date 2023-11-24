@@ -6,6 +6,10 @@ Console.WriteLine("____________________________________________");
 Console.WriteLine();
 
 var employee = new EmployeeInFile("Ben", "Tod");
+employee.AddGrade(30f);
+employee.AddGrade(60f);
+employee.AddGrade(2.35f);
+employee.AddGrade(60.25f);
 
 //while (true)
 //{
@@ -26,7 +30,7 @@ var employee = new EmployeeInFile("Ben", "Tod");
 //        Console.WriteLine($"Exception catched: {e.Message}");
 //    }
 //    Console.WriteLine("If you want to end the operation and calculate the statistics, press q. If not this");
-//} 
+//}
 
 var statistics = employee.GetStatistics(); 
 Console.WriteLine($"Average is {statistics.Average:N2}");

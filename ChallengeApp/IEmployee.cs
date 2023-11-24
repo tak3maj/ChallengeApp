@@ -7,8 +7,6 @@
 
         void AddGrade(float grade);
 
-        void AddGrade(short grade);
-
         void AddGrade(char grade);
 
         void AddGrade(long grade);

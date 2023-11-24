@@ -12,8 +12,6 @@
         }
         public abstract void AddGrade(float grade);
 
-        public abstract void AddGrade(short grade);
-
         public abstract void AddGrade(char grade);
 
         public abstract void AddGrade(long grade);
