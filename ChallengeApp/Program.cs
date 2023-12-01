@@ -5,7 +5,7 @@ Console.WriteLine("Welcome to the XYZ Employee Assessment Program");
 Console.WriteLine("____________________________________________");
 Console.WriteLine();
 
-var employee = new EmployeeInMemory("Ben", "Tod");
+var employee = new EmployeeInFile("Ben", "Tod");
 employee.GradeAdded += EmployeeGradeAdded;
 
 while (true)
